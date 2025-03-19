@@ -1,25 +1,30 @@
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     // Elements
-    const navbar = document.querySelector('.navbar'); // Your navbar element
-    const content = document.querySelector('.content'); // Your content element
-
-    // Variables to track scroll position
-    let lastScrollTop = 0;
-
+    const navbar = document.querySelector('.navbar');
+    const exhibition1 = document.querySelector('.exhibition1');
+    const exhibitionsContainer = document.querySelector('.exhibitions-container');
+    
+    // Calculate the cutoff point (total height of navbar area)
+    const cutoffPoint = navbar.offsetHeight + exhibition1.offsetHeight;
+    
+    // Set initial clip path
+    exhibitionsContainer.style.clipPath = `inset(0px 0px 0px 0px)`;
+    
     // Add scroll event listener
     window.addEventListener('scroll', function () {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Determine scroll direction
-        if (scrollTop > lastScrollTop) {
-            // Scrolling down
-            navbar.classList.remove('navbar-hidden');
+        
+        // Apply clip path effect to cut off content passing under navbar
+        if (scrollTop < cutoffPoint) {
+            // Amount of content that would be under the navbar
+            const hiddenAmount = cutoffPoint - scrollTop;
+            
+            // Apply clip path to cut off the top portion
+            exhibitionsContainer.style.clipPath = `inset(${hiddenAmount}px 0px 0px 0px)`;
         } else {
-            // Scrolling up
-            navbar.classList.add('navbar-hidden');
+            // Reset clip path when scrolled past cutoff point
+            exhibitionsContainer.style.clipPath = 'inset(0px 0px 0px 0px)';
         }
-
-        lastScrollTop = scrollTop;
     });
 });
