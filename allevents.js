@@ -1,16 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const events = document.querySelectorAll(".event-item");
+// Wait for the DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function () {
+    // Elements
+    const navbar = document.querySelector('.navbar'); // Your navbar element
+    const content = document.querySelector('.content'); // Your content element
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (!entry.isIntersecting) {
-                entry.target.style.opacity = "0"; // Hide when not visible
-                entry.target.style.transition = "opacity 0.5s ease-out";
-            } else {
-                entry.target.style.opacity = "1"; // Show when visible
-            }
-        });
-    }, { threshold: 0.1 });
+    // Variables to track scroll position
+    let lastScrollTop = 0;
 
-    events.forEach(event => observer.observe(event));
+    // Add scroll event listener
+    window.addEventListener('scroll', function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Determine scroll direction
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            navbar.classList.remove('navbar-hidden');
+        } else {
+            // Scrolling up
+            navbar.classList.add('navbar-hidden');
+        }
+
+        lastScrollTop = scrollTop;
+    });
 });

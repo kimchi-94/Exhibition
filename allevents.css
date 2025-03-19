@@ -159,7 +159,7 @@ nav-links & logo===============================*/
     padding: 10px 20px;
     position: relative;
     font-family: 'NeueHaasDisplayMedium', Helvetica, Arial, sans-serif;
-    z-index: 2;
+    z-index: 1000;
     /* Ensure the navbar is above the exhibition1 box */
 }
 
@@ -365,7 +365,7 @@ nav-links & logo===============================*/
     top: 20px;
     left: 0;
     right: 0;
-    z-index: 0;
+    z-index: 1000;
 }
 
 
