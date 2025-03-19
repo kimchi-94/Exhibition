@@ -550,43 +550,39 @@ body {
 
 
 .social-media-container {
-    position: fixed;
     display: flex;
     justify-content: center;
+    width: 100%;
+    margin-top: 30px;
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: -15px;
-    margin-left: 380px;
+    gap: 20px;
+    align-items: center;
 }
 
 .social-icons a img {
     height: auto;
     transition: transform 0.3s ease-in-out;
     filter: brightness(0);
-    margin: 5px;
     /* Makes the icons black */
 }
 
 /* Set different sizes for each icon */
 .social-icons a:nth-child(1) img {
     /* Instagram */
-    margin-top: 185%;
     width: 20px;
 }
 
 .social-icons a:nth-child(2) img {
     /* Facebook */
-    margin-top: 215%;
     width: 15px;
 }
 
 .social-icons a:nth-child(3) img {
     /* TikTok */
-    margin-top: 180%;
     width: 20px;
 }
 
