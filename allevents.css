@@ -233,13 +233,16 @@ nav-links & logo===============================*/
 .nav-links {
     position: fixed;
     top: 30px;
-    right: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 3;
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
-.nav-item1 {
+.nav-item {
     list-style: none;
-    margin-top: -10px;
 }
 
 .nav-link {
@@ -251,7 +254,6 @@ nav-links & logo===============================*/
     position: relative;
     padding-bottom: 5px;
 }
-
 
 
 

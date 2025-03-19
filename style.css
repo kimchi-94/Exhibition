@@ -228,7 +228,7 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: column;
     align-items: center;
     padding: 10px 20px;
     position: relative;
@@ -282,6 +282,8 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
+    z-index: 2;
+    /* Make sure logo is behind nav */
 }
 
 .logo2 img {
@@ -342,13 +344,16 @@ body {
 .nav-links {
     position: fixed;
     top: 30px;
-    right: 40px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 3;
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
-.nav-item1 {
+.nav-item {
     list-style: none;
-    margin-top: -10px;
 }
 
 .nav-link {
