@@ -282,6 +282,7 @@ nav-links & logo===============================*/
     position: relative;
     overflow: hidden;
     z-index: 5;
+
 }
 
 .exhibitions-container .exhibition:first-child {
