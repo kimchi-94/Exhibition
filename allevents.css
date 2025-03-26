@@ -265,7 +265,7 @@ nav .links, .nav-links {
 }
 
 .exhibition {
-    background: rgba(255, 255, 255, 0.455);
+    background: rgba(255, 255, 255, 0.684);
     backdrop-filter: blur(5px);
     border-radius: 25px;
     padding: 30px;
@@ -348,7 +348,7 @@ nav .links, .nav-links {
   6. Text & White Box for event page
    =============================== */
    .card2 {
-    background: rgba(255, 255, 255, 0.455);
+    background: rgba(255, 255, 255, 0.684);
     backdrop-filter: blur(5px);
     border-radius: 25px;
     padding: 40px;
@@ -394,7 +394,7 @@ nav .links, .nav-links {
   6. Text & White Box for website page
    =============================== */
    .card {
-    background: rgba(255, 255, 255, 0.455);
+    background: rgba(255, 255, 255, 0.684);
     backdrop-filter: blur(5px);
     border-radius: 25px;
     padding: 40px;
@@ -756,7 +756,7 @@ h1 {
 }
 
 .exhibition1 {
-    background: rgba(255, 255, 255, 0.455);
+    background: rgba(255, 255, 255, 0.684);
     backdrop-filter: blur(5px);
     border-radius: 25px;
     padding: 10px;
